@@ -139,3 +139,21 @@ planet_event = {
 		}
 	}
 }
+
+#config event for players
+event = {
+	id = ancient_survived_gamestart_event.200
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		every_country = {
+			limit = {
+				is_ancient_survivor = no
+				is_ai = no
+			}
+			country_event = { id = ancient_survived_country_event.200 }
+		}
+	}
+}

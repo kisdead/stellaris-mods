@@ -13,3 +13,9 @@
  tb_ancient_survived_stasis_zone:0 "Â£blocker Stasiskammern"
  tb_ancient_survived_stasis_zone_desc:0 "Diese defekten Stasiskammern haben einst groÃŸartige Dienste fÃ¼r das Ãœberleben einer fortschrittlichen Spezies geleistet. Nun sind sie aber unbrauchbar und mÃ¼ssen entfernt werden, damit das Land wieder bewirtschaftet werden kann."
  
+ ancient_survived_country_event.200.name:0 "Survived through ages"
+ ancient_survived_country_event.200.desc:0 "Is your species an ancient survivor? "
+ ancient_survived_country_event.200.a:0 "§LYes.§!"
+ ancient_survived_country_event.200.b:0 "§LYes, like all others.§!"
+ ancient_survived_country_event.200.c:0 "§BNo.§!"
+ 
