@@ -1,0 +1,29 @@
+
+namespace = ancient_survived_config_event
+
+# config-event on startup
+country_event = {
+	id = ancient_survived_config_event.100
+	title = "ancient_survived_config_event.100.name"
+	desc = "ancient_survived_config_event.100.desc"
+	picture = GFX_evt_dead_city
+	location = ROOT
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "ancient_survived_config_event.100.a"
+		# TODO YES
+	}
+	
+	option = {
+		name = "ancient_survived_config_event.100.b"
+		trigger = { is_ai = yes } # Comming Soon
+		# TODO YES-AI
+	}
+	
+	option = {
+		name = "ancient_survived_config_event.100.c"
+		# TODO NO
+	}
+}

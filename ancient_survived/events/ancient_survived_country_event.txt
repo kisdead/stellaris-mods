@@ -19,30 +19,3 @@ country_event = {
 		add_food = 5000
 	}
 }
-
-# config-event on startup
-country_event = {
-	id = ancient_survived_country_event.200
-	title = "ancient_survived_country_event.200.name"
-	desc = "ancient_survived_country_event.200.desc"
-	picture = GFX_evt_dead_city
-	location = ROOT
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "ancient_survived_country_event.200.a"
-		# TODO YES
-	}
-	
-	option = {
-		name = "ancient_survived_country_event.200.b"
-		trigger = { is_ai = yes } # Comming Soon
-		# TODO YES-AI
-	}
-	
-	option = {
-		name = "ancient_survived_country_event.200.c"
-		# TODO NO
-	}
-}
