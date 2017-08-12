@@ -13,3 +13,17 @@
  tb_ancient_survived_stasis_zone:0 "£blocker Stasiskammern"
  tb_ancient_survived_stasis_zone_desc:0 "Diese defekten Stasiskammern haben einst großartige Dienste für das Überleben einer fortschrittlichen Spezies geleistet. Nun sind sie aber unbrauchbar und müssen entfernt werden, damit das Land wieder bewirtschaftet werden kann."
  
+ ancient_survived_config_event.110.name:0 "Survived through ages config"
+ ancient_survived_config_event.110.desc:0 ""
+ ancient_survived_config_event.110.a1:0 "§GAktiviere§! Größe-25 Heimatwelt"
+ ancient_survived_config_event.110.a2:0 "§RDeaktiviere§! Größe-25 Heimatwelt"
+ ancient_survived_config_event.110.b1:0 "§GAktiviere§! Keine Vorläuferevents"
+ ancient_survived_config_event.110.b2:0 "§RDeaktiviere§! Keine Vorläuferevents"
+ ancient_survived_config_event.110.c1:0 "§GAktiviere§! Start mit fortschrittlichen Technologien"
+ ancient_survived_config_event.110.c2:0 "§RDeaktiviere§! Start mit fortschrittlichen Technologien"
+ ancient_survived_config_event.110.d1:0 "§GAktiviere§! Start mit fortschrittlicher Heimatwelt"
+ ancient_survived_config_event.110.d2:0 "§RDeaktiviere§! Start mit fortschrittlicher Heimatwelt"
+ ancient_survived_config_event.110.e1:0 "§GAktiviere§! KI-Imperien sind auch urzeitliche Überlebene"
+ ancient_survived_config_event.110.e2:0 "§RDeaktiviere§! KI-Imperien sind auch urzeitliche Überlebene"
+ ancient_survived_config_event.110.back:0 "§LKonfiguration fertig§!
+ 
