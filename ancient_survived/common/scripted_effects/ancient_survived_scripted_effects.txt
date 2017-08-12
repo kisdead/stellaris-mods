@@ -4,6 +4,17 @@ disable_precursor_events = {
 	set_country_flag = vultaum_intro
 }
 
+# Makes a planet an ancient survived homeworld, planet scope
+create_adv_homeworld = {
+	# TODO implement it like system initializer
+}
+
+# Gibes most techs of the game to the current scope's country
+give_adv_techs = {
+	give_all_common_techs = yes
+	give_ancient_building_techs = yes
+}
+
 # Gives most vanilla techs to the current scope's country
 give_all_common_techs = {
 	give_technology = { tech = "tech_databank_uplinks" message = no }

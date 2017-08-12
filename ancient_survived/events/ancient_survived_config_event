@@ -13,17 +13,173 @@ country_event = {
 	
 	option = {
 		name = "ancient_survived_config_event.100.a"
-		# TODO YES
+		trigger = { is_ai = no }
+		country_event = { id = ancient_survived_config_event.110 }
 	}
 	
 	option = {
 		name = "ancient_survived_config_event.100.b"
-		trigger = { is_ai = yes } # Comming Soon
-		# TODO YES-AI
+		country_event = { id = ancient_survived_config_event.120 }
 	}
 	
 	option = {
 		name = "ancient_survived_config_event.100.c"
-		# TODO NO
+		trigger = { is_ai = no }
+		country_event = { id = ancient_survived_config_event.130 }
+	}
+	
+	immediate = {
+		
+		if = {
+			limit = { NOT = { has_country_flag = ancient_survived_init_setup } }
+			
+			# Apply default options at start
+			set_country_flag = ancient_survived_prevent_precursors
+			set_country_flag = ancient_survived_adv_homeworld
+			set_country_flag = ancient_survived_adv_technology
+			
+			set_country_flag = ancient_survived_init_setup
+		}
+	}
+	
+}
+
+# config options
+country_event = {
+	id = ancient_survived_config_event.110
+	title = "ancient_survived_config_event.110.name"
+	desc = "ancient_survived_config_event.110.desc"
+	picture = GFX_evt_dead_city
+	location = ROOT
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "ancient_survived_config_event.110.a1"
+		trigger = { NOT = { has_country_flag = ancient_survived_25_homeworld } }
+		set_country_flag = ancient_survived_25_homeworld
+		country_event = { id = ancient_survived_config_event.110 }
+	}
+	
+	option = {
+		name = "ancient_survived_config_event.110.a2"
+		trigger = { has_country_flag = ancient_survived_25_homeworld }
+		remove_country_flag = ancient_survived_25_homeworld
+		country_event = { id = ancient_survived_config_event.110 }
+	}
+	
+	option = {
+		name = "ancient_survived_config_event.110.b1"
+		trigger = { NOT = { has_country_flag = ancient_survived_prevent_precursors } }
+		set_country_flag = ancient_survived_prevent_precursors
+		country_event = { id = ancient_survived_config_event.110 }
+	}
+	
+	option = {
+		name = "ancient_survived_config_event.110.b2"
+		trigger = { has_country_flag = ancient_survived_prevent_precursors }
+		remove_country_flag = ancient_survived_prevent_precursors
+		country_event = { id = ancient_survived_config_event.110 }
+	}
+	
+	option = {
+		name = "ancient_survived_config_event.110.c1"
+		trigger = { NOT = { has_country_flag = ancient_survived_adv_technology } }
+		set_country_flag = ancient_survived_adv_technology
+		country_event = { id = ancient_survived_config_event.110 }
+	}
+	
+	option = {
+		name = "ancient_survived_config_event.110.c2"
+		trigger = { has_country_flag = ancient_survived_adv_technology }
+		remove_country_flag = ancient_survived_adv_technology
+		country_event = { id = ancient_survived_config_event.110 }
+	}
+	
+	option = {
+		name = "ancient_survived_config_event.110.d1"
+		trigger = { NOT = { has_country_flag = ancient_survived_adv_homeworld } }
+		set_country_flag = ancient_survived_adv_homeworld
+		country_event = { id = ancient_survived_config_event.110 }
+	}
+	
+	option = {
+		name = "ancient_survived_config_event.110.d2"
+		trigger = { has_country_flag = ancient_survived_adv_homeworld }
+		remove_country_flag = ancient_survived_adv_homeworld
+		country_event = { id = ancient_survived_config_event.110 }
+	}
+	
+	option = {
+		name = "ancient_survived_config_event.110.e1"
+		trigger = { NOT = { has_country_flag = ancient_survived_ai_survivors } }
+		set_country_flag = ancient_survived_ai_survivors
+		country_event = { id = ancient_survived_config_event.110 }
+	}
+	
+	option = {
+		name = "ancient_survived_config_event.110.e2"
+		trigger = { has_country_flag = ancient_survived_ai_survivors }
+		remove_country_flag = ancient_survived_ai_survivors
+		country_event = { id = ancient_survived_config_event.110 }
+	}
+	
+	option = {
+		name = "ancient_survived_config_event.110.back"
+		country_event = { id = ancient_survived_config_event.100 }
+	}
+}
+
+# apply options
+country_event = {
+	id = ancient_survived_config_event.120
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		
+		if = {
+			limit = { has_country_flag = ancient_survived_25_homeworld }
+			capital_scope = { change_planet_size = 25 }
+		}
+		if = {
+			limit = { has_country_flag = ancient_survived_prevent_precursors }
+			disable_precursor_events = yes
+		}
+		if = {
+			limit = { has_country_flag = ancient_survived_adv_technology }
+			give_adv_techs = yes
+		}
+		if = {
+			limit = { has_country_flag = ancient_survived_adv_homeworld }
+			capital_scope = { create_adv_homeworld = yes }
+		}
+		if = {
+			limit = { has_country_flag = ancient_survived_ai_survivors }
+			every_country = {
+				limit = { is_ai = yes }
+				country_event = { id = ancient_survived_config_event.100 }
+			}
+		}
+		
+		country_event = { id = ancient_survived_config_event.130 }
+	}
+}
+
+# discard options
+country_event = {
+	id = ancient_survived_config_event.130
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		remove_country_flag = ancient_survived_25_homeworld
+		remove_country_flag = ancient_survived_prevent_precursors
+		remove_country_flag = ancient_survived_adv_technology
+		remove_country_flag = ancient_survived_adv_homeworld
+		remove_country_flag = ancient_survived_ai_survivors
+		remove_country_flag = ancient_survived_init_setup
 	}
 }
